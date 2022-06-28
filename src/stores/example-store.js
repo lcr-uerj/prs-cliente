@@ -1,15 +1,37 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
-  state: () => ({
-    counter: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.counter * 2
+export const UseCustomer = defineStore('piape', {
+  state: () => {
+    return {
+      customer: {
+        type: '',
+        name: '',
+        document: '',
+        last_name: '',
+        fantasy_name: '',
+        password: '',
+        password_confirmation: '',
+        nature: '',
+        state_registration: '',
+        municipal_registration: '',
+        hasNuclearMedicine: false,
+        hasBillingCompany: false
+      }
+    }
+  }
+})
+
+export const userActions = defineStore('base', {
+  state: () => {
+    return {
+      evento: {}
+    }
   },
   actions: {
-    increment () {
-      this.counter++
+    async preencerUsers () {
+      const request = await fetch('https://reqres.in/api/unknown/2')
+      const { data } = await request.json()
+      this.evento = data
     }
   }
 })

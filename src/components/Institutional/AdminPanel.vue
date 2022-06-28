@@ -4,7 +4,7 @@
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="customer.password" stack-label label="Senha" outlined/>
     </div>
-    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-5">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="customer.password_confirmation" stack-label label="Confirmar Senha" outlined/>
     </div>
     <p class="text-overline">
@@ -15,15 +15,13 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { UseCustomer } from 'stores/example-store'
 
 export default {
   name: 'AdminPanel',
   setup () {
-    const customer = ref({
-      password: '',
-      password_confirmation: ''
-    })
+    const store = UseCustomer()
+    const customer = store.customer
     return {
       customer
     }

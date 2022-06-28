@@ -20,7 +20,7 @@
 import { ref } from 'vue'
 import panelPerson from 'components/Institutional/PanelPerson.vue'
 import panelCompany from 'components/Institutional/PanelCompany.vue'
-
+import { UseCustomer } from 'stores/example-store'
 export default {
   name: 'InstitutionalData',
   components: {
@@ -28,9 +28,8 @@ export default {
     panelPerson
   },
   setup () {
-    const customer = ref({
-      type: ''
-    })
+    const store = UseCustomer()
+    const customer = store.customer
     return {
       customer,
       shape: ref('')

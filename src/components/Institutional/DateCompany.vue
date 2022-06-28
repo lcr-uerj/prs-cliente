@@ -46,21 +46,14 @@
 import { ref } from 'vue'
 import NuclearMedicine from 'components/Institutional/nuclearMedicine.vue'
 import BillingCollection from 'components/Institutional/billingCollection.vue'
+import { UseCustomer } from 'stores/example-store'
 
 export default {
   name: 'DateCompany',
   components: { BillingCollection, NuclearMedicine },
   setup () {
-    const customer = ref({
-      document: '',
-      name: '',
-      fantasy_name: '',
-      nature: '',
-      state_registration: '',
-      municipal_registration: '',
-      hasNuclearMedicine: false,
-      hasBillingCompany: false
-    })
+    const store = UseCustomer()
+    const customer = store.customer
     return {
       customer,
       right: ref(false),
