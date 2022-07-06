@@ -1,9 +1,11 @@
 <template>
   <h4 class="text-blue-grey">Faturamento/Cobrança</h4>
-  <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+  <div class="q-pt-lg row q-gutter-md justify-start">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.cnpj" stack-label label="CNPJ" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.name" label="Razão Social" stack-label outlined/>
     </div>
@@ -12,10 +14,12 @@
     </div>
   </div>
   <hr />
-  <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+  <div class="q-pt-lg row q-gutter-md justify-start">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.zip_code" stack-label label="CEP" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.neighborhood" label="Município" stack-label outlined/>
     </div>
@@ -31,9 +35,11 @@
   </div>
   <hr />
   <div class="q-pt-lg row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.contact_name" stack-label label="Nome do contato" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="payer.contact_telephone" label="Telefone/Celular" stack-label outlined/>
     </div>

@@ -1,8 +1,10 @@
 <template>
-  <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-9 col-lg-9">
+  <div class="q-pt-lg row q-gutter-md justify-start">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="nuclear.cnen_registration" stack-label label="Matrícula CNEN" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-3 col-lg-3">
       <q-input v-model="nuclear.operation_authorization_number" label="Autorização de operação nº:" stack-label outlined/>
     </div>
@@ -15,9 +17,11 @@
   </div>
   <hr />
   <div class="q-pt-lg row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="nuclear.cnes_number" stack-label label="CNES nº:" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="nuclear.sanitary_permit" label="Alvará Sanitário" stack-label outlined/>
     </div>

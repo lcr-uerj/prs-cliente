@@ -1,8 +1,10 @@
 <template>
   <div class="q-pt-lg row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="customer.document" stack-label label="CNPJ" placeholder="Somente números" outlined/>
     </div>
+  </div>
+    <div class="q-pt-lg row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="customer.name" label="Razão Social" stack-label maxlength="200" outlined/>
     </div>
@@ -10,14 +12,16 @@
       <q-input v-model="customer.fantasy_name" stack-label label="Nome Fantasia" maxlength="200" outlined/>
     </div>
   </div>
-  <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
-    <div class="col-xs-10 col-sm-6 col-md-10 col-lg-10">
+  <div class="q-pt-lg row q-gutter-md justify-start">
+    <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-select outlined v-model="customer.nature" stack-label :options="options" label="Natureza">
         <template v-if="customer.nature" v-slot:append>
           <q-icon name="cancel" @click.stop="customer.nature = null" class="cursor-pointer" />
         </template>
       </q-select>
     </div>
+  </div>
+    <div class="q-pt-lg q-pb-md row q-gutter-md justify-start">
     <div class="col-xs-10 col-sm-6 col-md-5 col-lg-5">
       <q-input v-model="customer.state_registration" label="Inscrição Estadual" maxlength="15" placeholder="Caso não tenha, coloque INSENTO" stack-label outlined/>
     </div>
